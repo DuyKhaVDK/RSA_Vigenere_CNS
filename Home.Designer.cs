@@ -39,30 +39,35 @@ namespace RSA1710900
             // 
             // btRSA
             // 
+            this.btRSA.BackColor = System.Drawing.Color.PaleTurquoise;
             this.btRSA.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btRSA.Location = new System.Drawing.Point(81, 373);
             this.btRSA.Name = "btRSA";
             this.btRSA.Size = new System.Drawing.Size(150, 56);
             this.btRSA.TabIndex = 2;
             this.btRSA.Text = "THUẬT TOÁN RSA";
+            this.btRSA.UseVisualStyleBackColor = false;
             this.btRSA.Click += new System.EventHandler(this.btRSA_Click);
             // 
             // btVigener
             // 
+            this.btVigener.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.btVigener.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btVigener.Location = new System.Drawing.Point(596, 370);
             this.btVigener.Name = "btVigener";
             this.btVigener.Size = new System.Drawing.Size(169, 62);
             this.btVigener.TabIndex = 1;
             this.btVigener.Text = "THUẬT TOÁN Vigener";
-            this.btVigener.UseVisualStyleBackColor = true;
+            this.btVigener.UseVisualStyleBackColor = false;
             this.btVigener.Click += new System.EventHandler(this.btVigener_Click);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.White;
+            this.label2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label2.Font = new System.Drawing.Font("Tahoma", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(136, 158);
+            this.label2.Location = new System.Drawing.Point(126, 163);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(540, 204);
             this.label2.TabIndex = 4;
@@ -95,19 +100,21 @@ namespace RSA1710900
             // 
             // btthanhvien
             // 
+            this.btthanhvien.BackColor = System.Drawing.SystemColors.Info;
             this.btthanhvien.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btthanhvien.Location = new System.Drawing.Point(350, 370);
             this.btthanhvien.Name = "btthanhvien";
             this.btthanhvien.Size = new System.Drawing.Size(139, 62);
             this.btthanhvien.TabIndex = 3;
             this.btthanhvien.Text = "Thành Viên";
-            this.btthanhvien.UseVisualStyleBackColor = true;
+            this.btthanhvien.UseVisualStyleBackColor = false;
             this.btthanhvien.Click += new System.EventHandler(this.btthanhvien_Click);
             // 
             // Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::RSA1710900.Properties.Resources.Cover6373386299943274211;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label1);

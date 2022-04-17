@@ -17,63 +17,46 @@ namespace RSA1710900
             InitializeComponent();
         }
 
-        private void Form2_Load(object sender, EventArgs e)
+        private void Form4_Load(object sender, EventArgs e)
         {
 
-        }
-
-        public void vigenereEncrypt(ref StringBuilder s, string key)
-        {
-            for (int i = 0; i < s.Length; i++) s[i] = Char.ToUpper(s[i]);
-            key = key.ToUpper();
-            int j = 0;
-            for (int i = 0; i < s.Length; i++)
-            {
-                if (Char.IsLetter(s[i]))
-                {
-                    s[i] = (char)(s[i] + key[j] - 'A');
-                    if (s[i] > 'Z') s[i] = (char)(s[i] - 'Z' + 'A' - 1);
-                }
-                j = j + 1 == key.Length ? 0 : j + 1;
-            }
-        }
-
-        public void VigenereDecrypt(ref StringBuilder s, string key)
-        {
-            for (int i = 0; i < s.Length; i++) s[i] = Char.ToUpper(s[i]);
-            key = key.ToUpper();
-            int j = 0;
-            for (int i = 0; i < s.Length; i++)
-            {
-                if (Char.IsLetter(s[i]))
-                {
-                    s[i] = s[i] >= key[j] ?
-                              (char)(s[i] - key[j] + 'A') :
-                              (char)('A' + ('Z' - key[j] + s[i] - 'A') + 1);
-                }
-                j = j + 1 == key.Length ? 0 : j + 1;
-            }
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            StringBuilder s = new StringBuilder(textBox1.Text);
-            string key = textBox2.Text;
-            vigenereEncrypt(ref s, key);
-            textBox3.Text = Convert.ToString(s);
+            if (textBox1.Text == "")
+            {
+                MessageBox.Show("Bạn chưa nhập chuỗi cần mã hóa");
+            }
+            else if (textBox2.Text == "")
+            {
+                MessageBox.Show("Bạn chưa nhập từ khóa");
+            }
+            else
+            {
+                Vigenere vigenere = new Vigenere(textBox2.Text.Trim());
+                vigenere.plainText = textBox1.Text.Trim();
+                textBox3.Text = vigenere.MaHoa();
+                textBox4.Text = vigenere.GiaiMa();
+                if (textBox1.Text == textBox4.Text)
+                {
+                    label5.Text = "Kết quả: Thành công. Bản rõ trùng khớp với chuỗi cần mã hóa.";
+                }
+                else
+                {
+                    label5.Text = "Kết quả: Thất bại. Bản rõ không trùng khớp với chuỗi cần mã hóa.";
+                }
+            }
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void textBox1_Leave(object sender, EventArgs e)
         {
-            StringBuilder s = new StringBuilder(textBox6.Text);
-            String key = textBox5.Text;
-            VigenereDecrypt(ref s, key);
-            textBox4.Text = Convert.ToString(s);
+            textBox1.Text = textBox1.Text.ToUpper();
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void textBox2_Leave(object sender, EventArgs e)
         {
-            this.Close();
+            textBox2.Text = textBox2.Text.ToUpper();
         }
     }
 }

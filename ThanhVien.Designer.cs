@@ -49,10 +49,10 @@
             this.label2.Font = new System.Drawing.Font("Tahoma", 25.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(78, 236);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(853, 318);
+            this.label2.Size = new System.Drawing.Size(823, 312);
             this.label2.TabIndex = 0;
             this.label2.Text = "1. Võ Duy Kha - 4501104104\r\n2. Nguyễn Văn Huy Em - 4501104059\r\n3. Nguyễn Thị Thu " +
-    "Hải - 4501104168\r\n4. Phạm Như Ý - 4501104287\r\n5. Nguyễn Thị Minh Phượng - 450110" +
+    "Hải - 4501104068\r\n4. Phạm Như Ý - 4501104287\r\n5. Nguyễn Thị Minh Phượng - 450110" +
     "4187\r\n6. Nguyễn Quốc Trung - 4501104261";
             // 
             // label3

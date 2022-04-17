@@ -28,7 +28,7 @@ namespace RSA1710900
 
         private void btRSA_Click(object sender, EventArgs e)
         {
-            Form3 frm = new Form3();
+            RSACryptosystem frm = new RSACryptosystem();
             frm.Show();
             this.Show();
         }
@@ -46,7 +46,7 @@ namespace RSA1710900
 
         private void label2_Click(object sender, EventArgs e)
         {
-
+            this.label2.Parent = null;
         }
     }
 }
